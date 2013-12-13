@@ -1,0 +1,42 @@
+clear
+echo
+echo
+echo
+echo 
+#!/bin/bash
+# djBB Buildbox
+echo "I created this script file to save some time." 
+sleep 3
+echo "I hate having to re-type every damn command when I grab a new OS."
+sleep 3
+echo |--------------------------------------|
+echo |--------------------------------------|
+echo |-- ++ --  @dj8218521 Twitter --- ++ --| 
+echo |--------------------------------------|
+echo |--------------------------------------|
+sleep 2
+echo
+echo "I would suggest installing a fresh, clean, brand new ubuntu 12.04 install and then starting this script"
+sleep 3
+read -p "Are you ready to get started? (y/n) " RESP
+if [ "$RESP" = "y" ]; then
+  echo "OK, GOOD."
+else
+  echo "Ok come back when you're ready! Thanks for downloading, hit thanks if you do not mind."
+sleep 2
+exit
+fi
+sleep 1
+echo "You can now step away from the computer, I will be running a bunch of commands in the back ground. This could take a while ... "
+sleep 2
+echo "Let's get started ..."
+sleep 1
+sudo apt-get install ubuntu-restricted-extras
+sudo wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo apt-get --quiet update && sudo apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo apt-get --quiet update
+sudo apt-get install libdvdcss2
+sudo apt-get install openjdk-6-jdk
+sudo apt-get install python
+sudo apt-get install git-core
+sleep 1
+
+
