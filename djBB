@@ -16,7 +16,7 @@ echo |--------------------------------------|
 echo |--------------------------------------|
 sleep 2
 echo
-echo "I would suggest installing a fresh, clean, brand new ubuntu 12.04 install and then starting this script"
+echo "I would suggest installing a fresh, clean, brand new ubuntu 12.04 install"
 sleep 3
 read -p "Are you ready to get started? (y/n) " RESP
 if [ "$RESP" = "y" ]; then
@@ -27,7 +27,7 @@ sleep 2
 exit
 fi
 sleep 1
-echo "You can now step away from the computer, I will be running a bunch of commands in the back ground. This could take a while ... "
+echo "This will take a few minutes and you will need to press the Y key for 'yes' to continue, pay attention to that."
 sleep 2
 echo "Let's get started ..."
 sleep 1
@@ -42,5 +42,32 @@ sleep 1
 #adding these files to test my git push
 #test1
 #test2
+#test done
 
+echo "now we will need the android sdk installed for ADB/FASTBOOT and some other things"
+sleep 2
+echo "I am going to grab 'adt-bundle-linux-x86_64-20131030.zip' from dev android site"
+sleep 2
+echo "Download that, extract and rename it to android-sdk to make things easier"
+sleep 2
+echo "copy this code onto clipboard -"
+# Android tools
+echo "export PATH=${PATH}:~/android-sdk/tools"
+echo "export PATH=${PATH}:~/android-sdk/platform-tools"
+echo "export PATH=${PATH}:~/bin"
+sleep 2
+echo "we need to put that code into the bottom of the .bashrc file becasue that is the first file that runs on start up and"
+sleep 5
+echo "with it in the correct path, we can run adb commands from anywhere in the shell"
+sleep 5
+echo "Navagate to /home and press 'control H' to see hidden files = .bashrc"
+sleep 3
+echo "save and exit"
+sleep 2
+echo "one more"
+sleep 2
+echo "add thie code to bottom of .profile in same directory"
+echo "PATH="$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$PATH"
+sleep 2
+echo "save and exit"
 
