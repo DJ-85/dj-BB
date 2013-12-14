@@ -39,30 +39,38 @@ sleep 1
 #test2
 #test done
 
-echo "now we will need the android sdk installed for ADB/FASTBOOT and some other things"
+read -p "Are you still with me? (y/n) " RESP
+if [ "$RESP" = "y" ]; then
+  echo "OK, GOOD."
+else
+  echo "Ok come back when you're ready! Thanks for downloading, hit thanks if you do not mind."
 sleep 2
-echo "I am going to grab 'adt-bundle-linux-x86_64-20131030.zip' from dev android site"
-sleep 2
-echo "Download that, extract and rename it to android-sdk to make things easier"
-sleep 2
-echo "copy this code onto clipboard -"
-# Android tools
-echo "export PATH=${PATH}:~/android-sdk/tools"
-echo "export PATH=${PATH}:~/android-sdk/platform-tools"
-echo "export PATH=${PATH}:~/bin"
-sleep 2
-echo "we need to put that code into the bottom of the .bashrc file becasue that is the first file that runs on start up and"
-sleep 5
-echo "with it in the correct path, we can run adb commands from anywhere in the shell"
-sleep 5
-echo "Navagate to /home and press 'control H' to see hidden files = .bashrc"
-sleep 3
-echo "save and exit"
-sleep 2
-echo "one more"
-sleep 2
-echo "add this code to bottom of .profile in same directory"
-echo "PATH="$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$PATH"
-sleep 2
-echo "save and exit"
+exit
+fi
 
+sleep 1
+wget http://www.broodplank.net/51-android.rules
+sudo mv -f 51-android.rules /etc/udev/rules.d/51-android.rules
+sudo chmod 644 /etc/udev/rules.d/51-android.rules
+sleep 1
+wget http://dl.google.com/android/adt/adt-bundle-linux-x86_64-20131030.zip
+mkdir ~/adt-bundle
+mv adt-bundle-linux-x86_64-20131030.zip ~/adt-bundle/adt_x64.zip
+cd ~/adt-bundle
+unzip adt_x64.zip
+mv -f adt-bundle-linux-x86_64-20131030/* .
+echo "Configuring environment"
+echo -e '\n# Android tools\nexport PATH=${PATH}:~/adt-bundle/sdk/tools\nexport PATH=$
+echo -e '\nPATH="$HOME/adt-bundle/sdk/tools:$HOME/adt-bundle/sdk/platform-tools:$PAT$
+echo "Placing desktop shortcuts"
+ln -s ~/adt-bundle/eclipse/eclipse ~/Desktop/Eclipse
+ln -s ~/adt-bundle/sdk/tools/android ~/Desktop/SDK-Manager
+sleep 1
+echo "Here is VLC Media Player also"
+sudo apt-get install vlc
+sleep 1
+clear
+echo 
+echo
+echo "We are almost done"
+sleep 5
