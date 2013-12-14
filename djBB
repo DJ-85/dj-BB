@@ -1,22 +1,17 @@
-clear
-echo
-echo
-echo
-echo 
 #!/bin/bash
+ 
+clear
 # djBB Buildbox
-echo "I created this script file to save some time." 
-sleep 3
-echo "I hate having to re-type every damn command when I grab a new OS."
-sleep 3
+echo "Set up buildbox, linux android build environment" 
 echo |--------------------------------------|
 echo |--------------------------------------|
 echo |-- ++ --  @dj8218521 Twitter --- ++ --| 
+echo |-- ++ --  @dj8218521 Github  --- ++ --|
 echo |--------------------------------------|
 echo |--------------------------------------|
-sleep 2
+sleep 3
 echo
-echo "I would suggest installing a fresh, clean, brand new ubuntu 12.04 install"
+echo "I used Ubuntu Linux 12.04"
 sleep 3
 read -p "Are you ready to get started? (y/n) " RESP
 if [ "$RESP" = "y" ]; then
