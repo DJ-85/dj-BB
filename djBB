@@ -72,5 +72,10 @@ sleep 1
 clear
 
 echo
-echo "We are almost done"
+echo "I am going to restart the computer now to complete the installation"
 sleep 5
+echo "Press the any key to continue.."
+read -n 1
+echo
+echo "rebooting"
+sudo adb reboot
