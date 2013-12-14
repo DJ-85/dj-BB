@@ -79,11 +79,4 @@ sudo apt-get install vlc
 sleep 1
 clear
 
-echo
-echo "I am going to restart the computer now to complete the installation"
-sleep 5
-echo "Press the any key to continue.."
-read -n 1
-echo
-echo "rebooting"
-sudo adb reboot
+echo "Now, everything is done. Just reboot the machine to finsh"
