@@ -74,6 +74,10 @@ echo "Placing desktop shortcuts"
 ln -s ~/adt-bundle/eclipse/eclipse ~/Desktop/Eclipse
 ln -s ~/adt-bundle/sdk/tools/android ~/Desktop/SDK-Manager
 sleep 1
+
+sudo apt-get install android-tools-adb
+sudo apt-get install curl
+
 echo "Here is VLC Media Player also"
 sudo apt-get install vlc
 sleep 1
