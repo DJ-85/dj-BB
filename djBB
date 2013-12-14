@@ -70,7 +70,7 @@ echo "Here is VLC Media Player also"
 sudo apt-get install vlc
 sleep 1
 clear
-echo 
+
 echo
 echo "We are almost done"
 sleep 5
