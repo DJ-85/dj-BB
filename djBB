@@ -1,14 +1,20 @@
 #!/bin/bash
  
 clear
+
 # djBB Buildbox
+echo
+echo
+echo
+echo
+
 echo "Set up buildbox, linux android build environment" 
-echo |--------------------------------------|
-echo |--------------------------------------|
-echo |-- ++ --  @dj8218521 Twitter --- ++ --| 
-echo |-- ++ --  @dj8218521 Github  --- ++ --|
-echo |--------------------------------------|
-echo |--------------------------------------|
+echo "|--------------------------------------|"
+echo "|--------------------------------------|"
+echo "|-- ++ --  @dj8218521 Twitter --- ++ --|"
+echo "|-- ++ --  @dj8218521 Github  --- ++ --|"
+echo "|--------------------------------------|"
+echo "|--------------------------------------|"
 sleep 3
 echo
 echo "I used Ubuntu Linux 12.04"
@@ -38,7 +44,9 @@ sleep 1
 #test1
 #test2
 #test done
-
+sleep 2
+echo "You will see a gray screen with purple background, hit tab then spacebar"
+sleep 2
 read -p "Are you still with me? (y/n) " RESP
 if [ "$RESP" = "y" ]; then
   echo "OK, GOOD."
